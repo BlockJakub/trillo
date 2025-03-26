@@ -1,0 +1,88 @@
+
+=================== PROJECT TRILLO ====================
+
+  1. Creating Basic Global reset in _base.scss file
+  --------------------------------------------
+      _base.scss file
+      * {
+          margin: 0;
+          padding: 0;
+        }
+
+       *,
+       *::before,
+       *::after {
+           box-sizing: inherit;
+        }
+
+       html {
+           box-sizing: border-box;
+           font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
+        }
+===========================================================================
+
+
+  2. Creating Variables in _variables.scss file
+  --------------------------------------------
+      _variables.scss file, Created CSS color variables
+        --color-primary: #eb2f64;
+      
+
+  3. THE LAYOUT OF THE PROJECT in _layout.scss file
+  ---------------------------------------------------
+      _layout.scss file
+
+      .container {
+           max-width: 120rem;
+           margin: 8rem auto;
+        }
+
+      .header {
+            height: 7rem;
+        }
+
+      .content {
+            display: flex;
+        }
+
+      .sidebar {
+          flex: 1;
+        }
+
+      .hotel-view {
+          flex: 1;
+        }
+
+===================================================================================
+
+  4.  SVG icons font icons in .header
+  ---------------------------------------------------
+    SVG === Scalable Vector Graphics. Visit https://iconmoon.io
+     -- RATHER use svg-icons than fonts-icons. WHY? Because the browser can display just black squares. Also for blind people.
+     the screen reader is better with SVG icons.
+
+     Choose exactly what icons you want then settings(unclick[untick]-->.PNG) then download.
+     In that dolder is file symbol-devs.svg that is a icons sprite what you will use for your web. It links to all icons and not link every single one.
+     So in your img/ folder paste the SVG/ folder with the icons and the sprite symbol-devs.svg.
+    <svg class="side-nav__icon">
+          <use xlink:href="img/sprite.svg#icon-home"></use>
+    </svg>
+
+    !!! THIS IS FOR THE SVG ICONS !!!! ---> xlink:href="img/sprite.svg#icon-home"
+    USING THE xlink:href = it including one SVG file the sprite.svg for the icons
+
+5. writing the COMPONENTS in .header
+--------------------------------------------------
+    Adding the images with styling the sizes
+===================================================================================
+
+6. BUILDING THE .header with FLEXBOX in _layout.scss file
+--------------------------------------------------
+    flex: 0 0 40%; // use space 40% of parent element
+
+7. BUILDING SIDE BAR AND NAVIGATION
+---------------------------------------------------
+  -- How to use scaleY and multiple transitions properties with different settings to create creative hover effects
+  -- How and why to use the currentColor CSS variable
+  -- How to use advsnced FLEXBOX alignment techniques, including flex-direction, justify-content and align-items
+
